@@ -1,20 +1,71 @@
-<!doctype html>
+<!doctype html>                                                                                                   <!--Initialize HTML file-->
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>David Chu's China Bistro</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">                                                                                        <!--Set the charcter set-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">                                                         <!--Tell some versions of IE to use the latest compatibility version of rendering engine-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">                                          <!--Meta tag to set scale and width so browsers on phones dont set scale randomly-->
+    <title>David Chu's China Bistro</title>                                                                       <!--Set the title for the tab in the browser-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">                                                          <!--Link to Bootstrap (BS) stylesheet-->
+    <link rel="stylesheet" href="css/styles.css">                                                                 <!--Link user stylesheet (This is done after the BS one so we can overwrite any BS defaults)-->
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>     <!--Link for fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
   </head>
+
+
 <body>
+  <header>                                                                                                        <!--Create header-->                                                                                                
+    <nav id="header-nav" class="navbar navbar-default">                                                           <!--Initialize BS navigation bar, set Id, set class to base:navbar with subclass:navbar-default (there are other navbar subclasses)-->
+      <div class="container">                                                                                     <!--The other option is container-fluid (fills the witdh of the browser and adds some padding). This one changes its width based on the width of the browser (CHECK BS DOC) This is the header container but the other containers will be alligned with this one-->
+        <div class="navbar-header">                                                                               <!--The navbar-header class is kind of a wrapper class to group other classes together (ex. logo and dropdown) -->
+          <a href="Index.html" class="pull-left visible-md visible-lg">                                           <!--Surround logo in a element so it is clickable. Use the pull-left class (BS way of floating left) to not have the div take up the entire width of the container. Only show the logo for md and lg screens-->
+            <div id="logo-img" alt="Logo image"></div>                                                            <!--Create a div to hold the logo image which will be set in the stylesheet-->
+          </a>
 
+          <div class="navbar-brand">                                                                              <!--Use navbar-brand class for branding-->                                                               
+            <a href="index.html">                                                                                 <!--Place it in an a element so it is clickable-->
+              <h1>David Chu's China Bistro</h1>                                                                   <!--Name of the resturant (most imporant thing about this page) is in h1-->
+            </a>
+            <p>
+              <img src="images/star-k-logo.png" alt="Kosher certification">
+              <span>Kosher Certified</span>
+            </p>
+          </div>
 
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">     <!--Dropdown menu, the navbar-toggle class is from BS and by default will only appear when the browser is smaller than 768px. Collapse is a JS plugin (controls the dropdown). The aria thing is for screen readers, dont worry about it. The data-target is kind of a pointer for where it wants to get the options for the dropdown--> 
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+        </div>                                                                                                    <!--End of navbar-header-->  
+        <div id="collapsable-nav" class="collapse navbar-collapse">                                               <!--Start of the nagivation options. Still want the icons in the container in the header. The collapsable-nav id is where the pointer for the dropdown will get its options-->  
+          <ul id="nav-list" class="nav navbar-nav navbar-right">                                                  <!--Create an unordered list for the navigations options. is the nav-list id for styling. The classes nav and navbar-nav are BS styling the list horizonitally and equally spaced and all that. navbar-right is pulling/floating right-->
+           <li>
+             <a href="menu-categories.html">                                                                      <!--Clickable a element-->  
+               <span class="glyphicon glyphicon-cutlery"></span><br class="hidden-xs"> Menu</a>                   <!--Using glyphicons which are icons that can sort of act like normal charaters when it comes to styling. Breaking so the text shows up underneath, This will go away when the browser is smaller so it is horizontal in the dropdown-->  
+           </li>
+           <li>
+             <a href="#">
+               <span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs"> About</a>
+           </li>
+           <li>
+             <a href="#">
+               <span class="glyphicon glyphicon-star"></span><br class="hidden-xs"> Awards</a>
+           </li>
+           <li id="phone" class="hidden-xs">                                                                      <!--Hide this element all together when the screen is small, there will be another element, completly apart from this list for extra small width-->  
+             <a href="tel:410-602-5008">                                                                          <!--the tel: will trigger the device to call if it can-->  
+               <span>410-602-5008</span></a><div>* We Deliver</div>
+           </li>
+         </ul>
+       </div>                                                                                                       <!--End of navbar-drowndown options-->
+
+      </div>                                                                                                        <!--End of container for the navbar-->  
+    </nav>
+  </header>
   <!-- jQuery (Bootstrap JS plugins depend on it) -->
-  <script src="js/jquery-3.5.1.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/script.js"></script>
+  <script src="js/jquery-3.5.1.min.js"></script>                                                                  <!--Link to JQuery (BS depend on JQ, so it must be defined first)-->
+  <script src="js/bootstrap.min.js"></script>                                                                     <!--Link to BS JS-->
+  <script src="js/script.js"></script>                                                                            <!--Link to user JS (may overwrite the above if needed)-->
 </body>
 </html>
