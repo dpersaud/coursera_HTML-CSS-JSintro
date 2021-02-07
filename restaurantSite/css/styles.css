@@ -90,9 +90,177 @@ body{                                                                           
 /* End of style for navigation options */
 /* End of header */ 
 
+
+
+/* Start of homepage */ 
+.container .jumbotron {
+  box-shadow: 0 0 50px #3f0c1f;
+  border: 2px solid #3f0c1f;
+}
+
+#menu-tile, #specials-tile, #map-tile {                                                         /* Styling shared between all the tiles so they all look the same */
+  height: 250px;
+  width: 100%;
+  margin-bottom: 15px;
+  position: relative;
+  border: 2px solid #3F0C1F;
+  overflow: hidden;
+}
+#menu-tile:hover, #specials-tile:hover, #map-tile:hover {                                       /* Indication for hovering over tiles */
+  box-shadow: 0 1px 5px 1px #cccccc;
+}
+#menu-tile {                                                                                    /* Set the picutre for the menu and center it so it doesnt matter that you onle use one image instead of different images for different sized browsers*/
+  background: url('../images/menu-tile.jpg') no-repeat;
+  background-position: center;
+}
+#specials-tile {
+  background: url('../images/specials-tile.jpg') no-repeat;
+  background-position: center;
+}
+#menu-tile span, #specials-tile span, #map-tile span {                                          /* Styling for the labels under the photos */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  opacity: .8;
+}
+/* End  of homepage */
+
+/* Call button style */ 
+#call-btn > a {
+  font-size: 1.5em;
+  display: block;
+  margin: 0 20px;
+  padding: 10px;
+  border: 2px solid #fff;
+  background-color: #f6b319;
+  color: #951c49;
+}
+#xs-deliver {
+  margin-top: 5px;
+  font-size: .7em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+/* End of call button style */
+
+/* Footer style */ 
+.panel-footer {
+  margin-top: 30px;
+  padding-top: 35px;
+  padding-bottom: 30px;
+  background-color: #222;
+  border-top: 0;
+}
+.panel-footer div.row {
+  margin-bottom: 35px;
+}
+#hours, #address {
+  line-height: 2;
+}
+#hours > span, #address > span {
+  font-size: 1.3em;
+}
+#address p {
+  color: #557c3e;
+  font-size: .8em;
+  line-height: 1.8;
+}
+#testimonials {
+  font-style: italic;
+}
+#testimonials p:nth-child(2) {
+  margin-top: 25px;
+}
+/* End of footer style */
+
+/* Menu categories style */
+.category-tile {                                                            /* Style for all of the tiles */
+  position: relative;
+  border: 2px solid #3f0c1f;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 15px;
+}
+.category-tile span {                                                       /* Style for the labels */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  opacity: .8;
+}
+.category-tile:hover {                                                      /* Style for the tile when hovering */
+  box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+#menu-categories-title + div {                                              /* Style for the next sibling of the title (subsituting white ...) */
+  margin-bottom: 50px;
+}
+/* End of menu categories style */
+
+/* Single category page */
+.menu-item-tile {                                                           /* Seperate from next row */
+  margin-bottom: 25px;
+}
+.menu-item-tile hr {                                                        /* Width of the divider for the XSmall size */
+  width: 80%;
+}
+.menu-item-tile .menu-item-price {                                          /* For the price inside the menu item */
+  font-size: 1.1em;
+  text-align: right;
+  margin-top: -15px;
+  margin-right: -15px;
+}
+.menu-item-tile .menu-item-price span {                                     /* For the span inside the price inside the menu item */
+  font-size: .6em;
+}
+.menu-item-photo {                                                          /* Styling for the picture */
+  position: relative;                                                       /* Relative position so the div within (D01) can be placed absolutly in the bottom corner  */
+  border: 2px solid #3F0C1F; 
+  overflow: hidden;
+  padding: 0;
+  margin-right: -15px;
+  margin-left: auto;
+  margin-bottom: 20px;
+  max-width: 250px;                                                         /* In HTML, the image was set to responsive, but we dont want to increase it past 250px */
+}
+.menu-item-photo div {                                                      /* Styling for the ID (D01) */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 80px;
+  background-color: #557c3e;
+  text-align: center;
+}
+.menu-item-description {
+  padding-right: 30px;
+}
+h3.menu-item-title {
+  margin: 0 0 10px;
+}
+.menu-item-details {
+  font-size: .9em;
+  font-style: italic;
+}
+/* End of signle category page */
+
 /* Responsive design */ 
 @media (min-width: 1200px) {                                                                    /* Large devices only */ 
-
+  .container .jumbotron{                                                                        
+    background: url("../images/jumbotron_1200.jpg") no-repeat;
+    height: 675px;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {                                             /* Medium devices only */ 
@@ -107,13 +275,17 @@ body{                                                                           
     padding-top: 0px;
     font-size: 28px;
   }
-  #phone a {                                                                                      /* Phone number */
+  #phone a {                                                                                    /* Phone number */
     font-size: .75em;;
   }
   #nav-list a {
     font-size: 0.9em;
   }
   /* End Header */
+  .container .jumbotron{
+    background: url("../images/jumbotron_992.jpg") no-repeat;
+    height: 558px;
+  }
 }
 
 
@@ -128,11 +300,15 @@ body{                                                                           
         margin: 15px;
         font-size: 0.8em;
     }
-    #phone a{                                                                                      /* Phone number */
+    #phone a{                                                                                   /* Phone number */
         margin-bottom: 0px;
         padding-bottom: 0px;
       }
     /* End Header */
+    .container .jumbotron{
+      background: url("../images/jumbotron_768.jpg") no-repeat;
+      height: 432px;
+    }
 }
 
 
@@ -161,8 +337,61 @@ body{                                                                           
     font-size: 1em;                                                                             /* Keep the same size from #collapsable-nav a */
     margin-right: 5px;
   }
-
   /* End Header */
+
+  .container .jumbotron{                                                                        /* Set jumbotron picture, has to be specified this way because of specificity, this will now overwrite the BS setting */
+    margin-top: 30px;
+    padding: 0;
+  }
+  
+  #menu-tile, #specials-tile{
+    width: 360px;
+    margin: 0px auto 15px;
+  }
+
+  /* Footer */
+  .panel-footer section {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .panel-footer section:nth-child(3) {
+    margin-bottom: 0; /* margin already exists on the whole row */
+  }
+  .panel-footer section hr {
+    width: 50%;
+  }
+  /* End Footer */
+
+  .menu-item-photo{
+    margin-right: auto;
+  }
+
+  .menu-item-description {
+    text-align: center;
+  }
 }
 
+@media (max-width: 479px) {                                                                     /* XXSmall devices only */
+  /* Header */
+  .navbar-brand h1 { /* Restaurant name */
+    padding-top: 5px;
+    font-size: 6vw;
+  }
+  /* End Header */
+  
+  /* Home page */
+  #menu-tile, #specials-tile {
+    width: 280px;
+    margin: 0 auto 15px;
+  }
+
+  .col-xxs-12 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+    width: 100%;
+  }
+}
 /* End of responsive design */ 
