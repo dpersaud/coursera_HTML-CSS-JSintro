@@ -1,0 +1,101 @@
+<!doctype html>                                                                                                   <!--Initialize HTML file-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">                                                                                        <!--Set the charcter set-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">                                                         <!--Tell some versions of IE to use the latest compatibility version of rendering engine-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">                                          <!--Meta tag to set scale and width so browsers on phones dont set scale randomly-->
+    <title>David Chu's China Bistro</title>                                                                       <!--Set the title for the tab in the browser-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">                                                          <!--Link to Bootstrap (BS) stylesheet-->
+    <link rel="stylesheet" href="css/styles.css">                                                                 <!--Link user stylesheet (This is done after the BS one so we can overwrite any BS defaults)-->
+  </head>
+
+<body>
+  <header>                                                                                                        <!--Create header-->                                                                                                
+    <nav id="header-nav" class="navbar navbar-default">                                                           <!--Initialize BS navigation bar, set Id, set class to base:navbar with subclass:navbar-default (there are other navbar subclasses)-->
+      <div class="container-fluid">                                                                               <!--The other option is container-fluid (fills the witdh of the browser and adds some padding). This one changes its width based on the width of the browser (CHECK BS DOC) This is the header container but the other containers will be alligned with this one-->
+        <div class="navbar-header">                                                                               <!--The navbar-header class is kind of a wrapper class to group other classes together (ex. logo and dropdown) -->
+          <div class="navbar-brand">                                                                              <!--Use navbar-brand class for branding-->                                                              
+            <a href="index.html">                                                                                 <!--Place it in an a element so it is clickable-->
+              <h1>Logo LLC</h1>                                                                                   <!--Name of the resturant (most imporant thing about this page) is in h1-->
+            </a>
+          </div>
+
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">     <!--Dropdown menu, the navbar-toggle class is from BS and by default will only appear when the browser is smaller than 768px. Collapse is a JS plugin (controls the dropdown). The aria thing is for screen readers, dont worry about it. The data-target is kind of a pointer for where it wants to get the options for the dropdown--> 
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+        </div>                                                                                                    <!--End of navbar-header-->  
+        
+        <div id="collapsable-nav" class="collapse navbar-collapse">                                               <!--Start of the nagivation options. Still want the icons in the container in the header. The collapsable-nav id is where the pointer for the dropdown will get its options-->  
+          <ul id="nav-list" class="nav navbar-nav navbar-right">                                                  <!--Create an unordered list for the navigations options. is the nav-list id for styling. The classes nav and navbar-nav are BS styling the list horizonitally and equally spaced and all that. navbar-right is pulling/floating right-->
+           <li class="visible-xs">
+            <a href="#c">                                                                                 <!--Clickable a element-->  
+              Chicken
+            </a>
+           </li>
+           <li class="visible-xs">
+            <a href="#b">                                                                      <!--Clickable a element-->  
+              Beef 
+            </a>
+           </li>
+           <li class="visible-xs">
+             <a href="#s">
+               Sushi
+             </a>
+           </li>
+         </ul>
+       </div>                                                                                                     <!--End of navbar-drowndown options-->
+      </div>                                                                                                      <!--End of container for the navbar-->  
+    </nav>                                                                                                        <!--End of container for the navigation element--> 
+  </header>
+
+  <div id="main-content" class="container-fluid">
+    <h2 id="h2"class="text-center">
+      Our Menu
+    </h2>
+    <section class="row">
+      <div class="rdSection col-md-4 col-sm-6 col-xs-12">
+        <div class="tile">
+          <h3 id="c" class="tile-title text-center">
+            Chicken
+          </h3>
+          <div class="tile-subject">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac lectus orci. Proin sed turpis mi. Suspendisse potenti. Ut ultrices lectus eget semper suscipit. Nam malesuada dolor sit amet libero placerat, facilisis ullamcorper felis consectetur. Morbi maximus diam fermentum turpis tempor, vitae ullamcorper felis volutpat. Etiam at justo imperdiet, euismod urna eget, consequat turpis. Sed non sem a ligula placerat vestibulum a a est. In lacinia imperdiet felis non mattis. Phasellus ut sollicitudin magna, quis consectetur tortor. Vivamus finibus lobortis dolor, non fermentum nisl suscipit sit amet. Phasellus porta cursus mauris et placerat. Etiam dignissim vestibulum consectetur. Praesent aliquam leo justo, id varius dolor sagittis tempor. Vivamus congue mattis ex convallis efficitur. Morbi at nulla metus. Nulla ac neque auctor, pellentesque mauris laoreet, molestie nisl. Ut ante tellus, sodales nec justo at, iaculis interdum augue. Vivamus tincidunt felis nec turpis pretium facilisis. Morbi vitae odio odio. Sed sit amet quam venenatis, egestas erat a, mattis massa. Maecenas at pharetra leo. Morbi semper sit amet ligula vitae efficitur. Quisque molestie quam et nisi laoreet, non molestie tellus condimentum. Ut et ipsum non sem placerat accumsan id non purus. Cras vel mi quis urna rutrum dictum eu at magna. Ut condimentum, velit sed mollis lacinia, odio neque interdum turpis, ut ultricies dolor urna id nunc. Donec eleifend orci ac vulputate euismod. Curabitur at blandit libero.
+          <a href="#h2">Back to Top</a>
+          </div>
+        </div>
+      </div>
+      <div class="rdSection col-md-4 col-sm-6 col-xs-12">
+        <div class="tile">
+          <h3 id="b" class="tile-title text-center">
+            Beef
+          </h3>
+          <div class="tile-subject">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac lectus orci. Proin sed turpis mi. Suspendisse potenti. Ut ultrices lectus eget semper suscipit. Nam malesuada dolor sit amet libero placerat, facilisis ullamcorper felis consectetur. Morbi maximus diam fermentum turpis tempor, vitae ullamcorper felis volutpat. Etiam at justo imperdiet, euismod urna eget, consequat turpis. Sed non sem a ligula placerat vestibulum a a est. In lacinia imperdiet felis non mattis. Phasellus ut sollicitudin magna, quis consectetur tortor. Vivamus finibus lobortis dolor, non fermentum nisl suscipit sit amet. Phasellus porta cursus mauris et placerat. Etiam dignissim vestibulum consectetur. Praesent aliquam leo justo, id varius dolor sagittis tempor. Vivamus congue mattis ex convallis efficitur. Morbi at nulla metus. Nulla ac neque auctor, pellentesque mauris laoreet, molestie nisl. Ut ante tellus, sodales nec justo at, iaculis interdum augue. Vivamus tincidunt felis nec turpis pretium facilisis. Morbi vitae odio odio. Sed sit amet quam venenatis, egestas erat a, mattis massa. Maecenas at pharetra leo. Morbi semper sit amet ligula vitae efficitur. Quisque molestie quam et nisi laoreet, non molestie tellus condimentum. Ut et ipsum non sem placerat accumsan id non purus. Cras vel mi quis urna rutrum dictum eu at magna. Ut condimentum, velit sed mollis lacinia, odio neque interdum turpis, ut ultricies dolor urna id nunc. Donec eleifend orci ac vulputate euismod. Curabitur at blandit libero. 
+            <a href="#h2">Back to Top</a>
+          </div>
+        </div>
+      </div>
+      <div class="rdSection col-md-4 col-sm-12 col-xs-12">
+        <div class="tile">
+          <h3 id="s" class="tile-title text-center">
+            Sushi
+          </h3>
+          <div class="tile-subject">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac lectus orci. Proin sed turpis mi. Suspendisse potenti. Ut ultrices lectus eget semper suscipit. Nam malesuada dolor sit amet libero placerat, facilisis ullamcorper felis consectetur. Morbi maximus diam fermentum turpis tempor, vitae ullamcorper felis volutpat. Etiam at justo imperdiet, euismod urna eget, consequat turpis. Sed non sem a ligula placerat vestibulum a a est. In lacinia imperdiet felis non mattis. Phasellus ut sollicitudin magna, quis consectetur tortor. Vivamus finibus lobortis dolor, non fermentum nisl suscipit sit amet. Phasellus porta cursus mauris et placerat. Etiam dignissim vestibulum consectetur. Praesent aliquam leo justo, id varius dolor sagittis tempor. Vivamus congue mattis ex convallis efficitur. Morbi at nulla metus. Nulla ac neque auctor, pellentesque mauris laoreet, molestie nisl. Ut ante tellus, sodales nec justo at, iaculis interdum augue. Vivamus tincidunt felis nec turpis pretium facilisis. Morbi vitae odio odio. Sed sit amet quam venenatis, egestas erat a, mattis massa. Maecenas at pharetra leo. Morbi semper sit amet ligula vitae efficitur. Quisque molestie quam et nisi laoreet, non molestie tellus condimentum. Ut et ipsum non sem placerat accumsan id non purus. Cras vel mi quis urna rutrum dictum eu at magna. Ut condimentum, velit sed mollis lacinia, odio neque interdum turpis, ut ultricies dolor urna id nunc. Donec eleifend orci ac vulputate euismod. Curabitur at blandit libero.
+            <a href="#h2">Back to Top</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- jQuery (Bootstrap JS plugins depend on it) -->
+  <script src="js/jquery-3.5.1.min.js"></script>                                                                  <!--Link to JQuery (BS depend on JQ, so it must be defined first)-->
+  <script src="js/bootstrap.min.js"></script>                                                                     <!--Link to BS JS-->
+  <script src="js/script.js"></script>                                                                            <!--Link to user JS (may overwrite the above if needed)-->
+</body>
+</html>

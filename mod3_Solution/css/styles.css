@@ -1,0 +1,94 @@
+body{                                                                                           /* Setting some global styles */
+    font-size: 16px;                                                            
+    color: #000;
+    background-color: #778899;
+    font-family: 'Oxygen', sans-serif;
+}
+
+/* Start of header */
+#header-nav{
+    background-color: #3a434d;                                                                /* Setting the color on the nav-header because it streches the entire width of the page where as the contianer does not (by design)*/
+    border-radius: 0;
+    border: 0;
+}
+
+/* Start of brand */
+.navbar-brand {                                                                                 /* Padding for the brand name for better alignment */
+  height: 70px;
+}
+
+.navbar-brand h1 {                                                                              /* Style for the resturant name */                                                             
+    color: #f2f4f6;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.navbar-brand a:hover, .navbar-brand a:focus {                                                  /* No underline when hovering over the brand */
+    text-decoration: none;
+}
+/* End of brand */
+
+/* Style for the navigation options */  
+#nav-list {                                                                                                                               
+    margin-top: 10px;
+}
+#nav-list a {
+    color: #f2f4f6;
+    text-align: center;
+}
+ #nav-list a:hover {
+    background: #b7bfc9;
+}
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {                                 /* Dropdown styling, specifically, the icon bar id */  
+    border: 1px solid #f2f4f6;
+}
+.navbar-header button.navbar-toggle {
+   clear: both;
+   margin-top: -50px;
+}
+/* End of style for navigation options */
+/* End of header */ 
+
+h2{
+  color:#f2f4f6
+}
+
+.row{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.rdSection{
+  padding: 10px;
+}
+
+.tile{
+  background-color: #f2f4f6;
+  height: 700px;
+  border: 1px solid #000;
+  padding: 10px;
+  border-radius: 10px;
+  overflow: auto;
+}
+
+/* Responsive design */ 
+@media (min-width: 1200px) {                                                                    /* Large devices only */ 
+
+}
+
+@media (min-width: 992codepx) and (max-width: 1199px) {                                             /* Medium devices only */ 
+
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {                                              /* Small devices only */ 
+
+}
+
+
+@media (max-width: 767px) {                                                                     /* XSmall devices only */ 
+
+}
+
+/* End of responsive design */ 
